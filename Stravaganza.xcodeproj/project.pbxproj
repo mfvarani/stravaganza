@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12CA7968A129421D6DDD3DF3 /* Pods_Stravaganza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC3A80F5BEA7DF7BE4E2B8E /* Pods_Stravaganza.framework */; };
 		3ECE81F928F0A51200DAE3E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE81F828F0A51200DAE3E8 /* AppDelegate.swift */; };
 		3ECE81FB28F0A51200DAE3E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE81FA28F0A51200DAE3E8 /* SceneDelegate.swift */; };
 		3ECE820228F0A51400DAE3E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE820128F0A51400DAE3E8 /* Assets.xcassets */; };
 		3ECE820528F0A51400DAE3E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE820328F0A51400DAE3E8 /* LaunchScreen.storyboard */; };
 		3ECE821028F0A51400DAE3E8 /* StravaganzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE820F28F0A51400DAE3E8 /* StravaganzaTests.swift */; };
 		3ECE822928F0AA5F00DAE3E8 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE822828F0AA5F00DAE3E8 /* OnboardingPageViewController.swift */; };
+		6F760BB463940C16D28002AF /* Pods_Stravaganza_StravaganzaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59BF62C7B1C77DDAE9798DE /* Pods_Stravaganza_StravaganzaUITests.framework */; };
+		8F63A197529C91B93BA3083B /* Pods_StravaganzaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE3F4763A77D34F638EBB8E /* Pods_StravaganzaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DE3F4763A77D34F638EBB8E /* Pods_StravaganzaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StravaganzaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3629D7618D37A2019B9A4DEF /* Pods-Stravaganza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stravaganza.debug.xcconfig"; path = "Target Support Files/Pods-Stravaganza/Pods-Stravaganza.debug.xcconfig"; sourceTree = "<group>"; };
 		3ECE81F528F0A51200DAE3E8 /* Stravaganza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stravaganza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECE81F828F0A51200DAE3E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ECE81FA28F0A51200DAE3E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +48,13 @@
 		3ECE820F28F0A51400DAE3E8 /* StravaganzaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaganzaTests.swift; sourceTree = "<group>"; };
 		3ECE821528F0A51400DAE3E8 /* StravaganzaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StravaganzaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECE822828F0AA5F00DAE3E8 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		3F4FF2BE19453619729A6F41 /* Pods-Stravaganza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stravaganza.release.xcconfig"; path = "Target Support Files/Pods-Stravaganza/Pods-Stravaganza.release.xcconfig"; sourceTree = "<group>"; };
+		5FAA1932AF859C1E7560C274 /* Pods-StravaganzaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StravaganzaTests.release.xcconfig"; path = "Target Support Files/Pods-StravaganzaTests/Pods-StravaganzaTests.release.xcconfig"; sourceTree = "<group>"; };
+		9EC3A80F5BEA7DF7BE4E2B8E /* Pods_Stravaganza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stravaganza.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59BF62C7B1C77DDAE9798DE /* Pods_Stravaganza_StravaganzaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stravaganza_StravaganzaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5B732880024D9A5BC01208 /* Pods-StravaganzaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StravaganzaTests.debug.xcconfig"; path = "Target Support Files/Pods-StravaganzaTests/Pods-StravaganzaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E89C9D997CA03C665C0B98A7 /* Pods-Stravaganza-StravaganzaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stravaganza-StravaganzaUITests.release.xcconfig"; path = "Target Support Files/Pods-Stravaganza-StravaganzaUITests/Pods-Stravaganza-StravaganzaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EA3113BB6588C4EDD013D797 /* Pods-Stravaganza-StravaganzaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stravaganza-StravaganzaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Stravaganza-StravaganzaUITests/Pods-Stravaganza-StravaganzaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12CA7968A129421D6DDD3DF3 /* Pods_Stravaganza.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F63A197529C91B93BA3083B /* Pods_StravaganzaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F760BB463940C16D28002AF /* Pods_Stravaganza_StravaganzaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +91,8 @@
 				3ECE81F728F0A51200DAE3E8 /* Stravaganza */,
 				3ECE820E28F0A51400DAE3E8 /* StravaganzaTests */,
 				3ECE81F628F0A51200DAE3E8 /* Products */,
+				6B965DFD475073CF16ACDA64 /* Pods */,
+				D93971D6D73785C17AB75826 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +127,30 @@
 			path = StravaganzaTests;
 			sourceTree = "<group>";
 		};
+		6B965DFD475073CF16ACDA64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3629D7618D37A2019B9A4DEF /* Pods-Stravaganza.debug.xcconfig */,
+				3F4FF2BE19453619729A6F41 /* Pods-Stravaganza.release.xcconfig */,
+				EA3113BB6588C4EDD013D797 /* Pods-Stravaganza-StravaganzaUITests.debug.xcconfig */,
+				E89C9D997CA03C665C0B98A7 /* Pods-Stravaganza-StravaganzaUITests.release.xcconfig */,
+				BE5B732880024D9A5BC01208 /* Pods-StravaganzaTests.debug.xcconfig */,
+				5FAA1932AF859C1E7560C274 /* Pods-StravaganzaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D93971D6D73785C17AB75826 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EC3A80F5BEA7DF7BE4E2B8E /* Pods_Stravaganza.framework */,
+				B59BF62C7B1C77DDAE9798DE /* Pods_Stravaganza_StravaganzaUITests.framework */,
+				2DE3F4763A77D34F638EBB8E /* Pods_StravaganzaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ECE821F28F0A51400DAE3E8 /* Build configuration list for PBXNativeTarget "Stravaganza" */;
 			buildPhases = (
+				91869AA3F3653A6FB7077473 /* [CP] Check Pods Manifest.lock */,
 				3ECE81F128F0A51200DAE3E8 /* Sources */,
 				3ECE81F228F0A51200DAE3E8 /* Frameworks */,
 				3ECE81F328F0A51200DAE3E8 /* Resources */,
+				978530BC28F4606CE74C5A44 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +177,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ECE822228F0A51400DAE3E8 /* Build configuration list for PBXNativeTarget "StravaganzaTests" */;
 			buildPhases = (
+				56A1784F94289995F9CB970A /* [CP] Check Pods Manifest.lock */,
 				3ECE820728F0A51400DAE3E8 /* Sources */,
 				3ECE820828F0A51400DAE3E8 /* Frameworks */,
 				3ECE820928F0A51400DAE3E8 /* Resources */,
@@ -152,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ECE822528F0A51400DAE3E8 /* Build configuration list for PBXNativeTarget "StravaganzaUITests" */;
 			buildPhases = (
+				8B7D855AD0DA801D90976005 /* [CP] Check Pods Manifest.lock */,
 				3ECE821128F0A51400DAE3E8 /* Sources */,
 				3ECE821228F0A51400DAE3E8 /* Frameworks */,
 				3ECE821328F0A51400DAE3E8 /* Resources */,
+				8B3881E3669C56D486EE3414 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +280,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56A1784F94289995F9CB970A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StravaganzaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B3881E3669C56D486EE3414 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stravaganza-StravaganzaUITests/Pods-Stravaganza-StravaganzaUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stravaganza-StravaganzaUITests/Pods-Stravaganza-StravaganzaUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stravaganza-StravaganzaUITests/Pods-Stravaganza-StravaganzaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B7D855AD0DA801D90976005 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stravaganza-StravaganzaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91869AA3F3653A6FB7077473 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stravaganza-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		978530BC28F4606CE74C5A44 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stravaganza/Pods-Stravaganza-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stravaganza/Pods-Stravaganza-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stravaganza/Pods-Stravaganza-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3ECE81F128F0A51200DAE3E8 /* Sources */ = {
@@ -406,6 +555,7 @@
 		};
 		3ECE822028F0A51400DAE3E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3629D7618D37A2019B9A4DEF /* Pods-Stravaganza.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -433,6 +583,7 @@
 		};
 		3ECE822128F0A51400DAE3E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F4FF2BE19453619729A6F41 /* Pods-Stravaganza.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +611,7 @@
 		};
 		3ECE822328F0A51400DAE3E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE5B732880024D9A5BC01208 /* Pods-StravaganzaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -480,6 +632,7 @@
 		};
 		3ECE822428F0A51400DAE3E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FAA1932AF859C1E7560C274 /* Pods-StravaganzaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -500,6 +653,7 @@
 		};
 		3ECE822628F0A51400DAE3E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA3113BB6588C4EDD013D797 /* Pods-Stravaganza-StravaganzaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -518,6 +672,7 @@
 		};
 		3ECE822728F0A51400DAE3E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E89C9D997CA03C665C0B98A7 /* Pods-Stravaganza-StravaganzaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
