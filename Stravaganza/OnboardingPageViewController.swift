@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OnboardingPageViewController.swift
 //  Stravaganza
 //
 //  Created by Marcos Federico Varani on 07/10/2022.
@@ -7,13 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class OnboardingPageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .orange
     }
-
-
 }
-
