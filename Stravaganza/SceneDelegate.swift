@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         // Create view hierarchy
-        let viewController = OnboardingPageViewController()
+        let viewController = OnboardingPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
         let navigationController = UINavigationController(rootViewController: viewController)
         
         // Set as root view controller
