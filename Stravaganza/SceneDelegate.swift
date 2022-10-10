@@ -19,12 +19,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create UIWindow
         let window = UIWindow(windowScene: windowScene)
         
-        // Create view hierarchy
-        let viewController = OnboardingPageViewController()
-        let navigationController = UINavigationController(rootViewController: viewController)
+        // Create view hierarchy & set Root View Controller
         
-        // Set as root view controller
-        window.rootViewController = navigationController
+        if UserDefaults.standard.bool(forKey: "notFirstTime") {
+            let viewController = RideTabBarViewController()
+            let navigationController = UINavigationController(rootViewController: viewController)
+            window.rootViewController = navigationController
+        } else {
+            let viewController = OnboardingPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+            let navigationController = UINavigationController(rootViewController: viewController)
+            UserDefaults.standard.set(true, forKey: "notFirstTime")
+            window.rootViewController = navigationController
+        }
         
         // Set window and call makeKeyAndVisible()
         self.window = window

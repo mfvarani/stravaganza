@@ -14,6 +14,11 @@
 		3ECE820528F0A51400DAE3E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE820328F0A51400DAE3E8 /* LaunchScreen.storyboard */; };
 		3ECE821028F0A51400DAE3E8 /* StravaganzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE820F28F0A51400DAE3E8 /* StravaganzaTests.swift */; };
 		3ECE822928F0AA5F00DAE3E8 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE822828F0AA5F00DAE3E8 /* OnboardingPageViewController.swift */; };
+		3ED1C53528F0E77A00848DEE /* OnboardingBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED1C53428F0E77A00848DEE /* OnboardingBaseViewController.swift */; };
+		3ED1C53728F0E87700848DEE /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED1C53628F0E87700848DEE /* OnboardingViewModel.swift */; };
+		3ED1C54028F0FA8100848DEE /* UIFont+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED1C53F28F0FA8100848DEE /* UIFont+Utils.swift */; };
+		3ED1C54228F0FB1E00848DEE /* Abel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ED1C54128F0FB1E00848DEE /* Abel-Regular.ttf */; };
+		3ED1C54828F373BE00848DEE /* RideTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED1C54728F373BE00848DEE /* RideTabBarViewController.swift */; };
 		6F760BB463940C16D28002AF /* Pods_Stravaganza_StravaganzaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59BF62C7B1C77DDAE9798DE /* Pods_Stravaganza_StravaganzaUITests.framework */; };
 		8F63A197529C91B93BA3083B /* Pods_StravaganzaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE3F4763A77D34F638EBB8E /* Pods_StravaganzaTests.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +53,11 @@
 		3ECE820F28F0A51400DAE3E8 /* StravaganzaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaganzaTests.swift; sourceTree = "<group>"; };
 		3ECE821528F0A51400DAE3E8 /* StravaganzaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StravaganzaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECE822828F0AA5F00DAE3E8 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		3ED1C53428F0E77A00848DEE /* OnboardingBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingBaseViewController.swift; sourceTree = "<group>"; };
+		3ED1C53628F0E87700848DEE /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		3ED1C53F28F0FA8100848DEE /* UIFont+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Utils.swift"; sourceTree = "<group>"; };
+		3ED1C54128F0FB1E00848DEE /* Abel-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Abel-Regular.ttf"; sourceTree = "<group>"; };
+		3ED1C54728F373BE00848DEE /* RideTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideTabBarViewController.swift; sourceTree = "<group>"; };
 		3F4FF2BE19453619729A6F41 /* Pods-Stravaganza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stravaganza.release.xcconfig"; path = "Target Support Files/Pods-Stravaganza/Pods-Stravaganza.release.xcconfig"; sourceTree = "<group>"; };
 		5FAA1932AF859C1E7560C274 /* Pods-StravaganzaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StravaganzaTests.release.xcconfig"; path = "Target Support Files/Pods-StravaganzaTests/Pods-StravaganzaTests.release.xcconfig"; sourceTree = "<group>"; };
 		9EC3A80F5BEA7DF7BE4E2B8E /* Pods_Stravaganza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stravaganza.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +119,10 @@
 		3ECE81F728F0A51200DAE3E8 /* Stravaganza */ = {
 			isa = PBXGroup;
 			children = (
-				3ECE822828F0AA5F00DAE3E8 /* OnboardingPageViewController.swift */,
+				3ED1C54128F0FB1E00848DEE /* Abel-Regular.ttf */,
+				3ED1C53E28F0FA6C00848DEE /* Helpers */,
+				3ED1C53328F0E74500848DEE /* Onboarding */,
+				3ED1C54628F371C900848DEE /* Ride */,
 				3ECE81F828F0A51200DAE3E8 /* AppDelegate.swift */,
 				3ECE81FA28F0A51200DAE3E8 /* SceneDelegate.swift */,
 				3ECE820128F0A51400DAE3E8 /* Assets.xcassets */,
@@ -127,6 +140,32 @@
 			path = StravaganzaTests;
 			sourceTree = "<group>";
 		};
+		3ED1C53328F0E74500848DEE /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				3ECE822828F0AA5F00DAE3E8 /* OnboardingPageViewController.swift */,
+				3ED1C53428F0E77A00848DEE /* OnboardingBaseViewController.swift */,
+				3ED1C53628F0E87700848DEE /* OnboardingViewModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		3ED1C53E28F0FA6C00848DEE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3ED1C53F28F0FA8100848DEE /* UIFont+Utils.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3ED1C54628F371C900848DEE /* Ride */ = {
+			isa = PBXGroup;
+			children = (
+				3ED1C54728F373BE00848DEE /* RideTabBarViewController.swift */,
+			);
+			path = Ride;
+			sourceTree = "<group>";
+		};
 		6B965DFD475073CF16ACDA64 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +176,6 @@
 				BE5B732880024D9A5BC01208 /* Pods-StravaganzaTests.debug.xcconfig */,
 				5FAA1932AF859C1E7560C274 /* Pods-StravaganzaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -260,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED1C54228F0FB1E00848DEE /* Abel-Regular.ttf in Resources */,
 				3ECE820528F0A51400DAE3E8 /* LaunchScreen.storyboard in Resources */,
 				3ECE820228F0A51400DAE3E8 /* Assets.xcassets in Resources */,
 			);
@@ -389,9 +428,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED1C54028F0FA8100848DEE /* UIFont+Utils.swift in Sources */,
+				3ED1C53728F0E87700848DEE /* OnboardingViewModel.swift in Sources */,
 				3ECE81F928F0A51200DAE3E8 /* AppDelegate.swift in Sources */,
 				3ECE822928F0AA5F00DAE3E8 /* OnboardingPageViewController.swift in Sources */,
+				3ED1C53528F0E77A00848DEE /* OnboardingBaseViewController.swift in Sources */,
 				3ECE81FB28F0A51200DAE3E8 /* SceneDelegate.swift in Sources */,
+				3ED1C54828F373BE00848DEE /* RideTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
