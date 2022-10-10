@@ -11,24 +11,73 @@ class RideTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        // Do any additional setup after loading the view.
+        setup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setup() {
+        navigationItem.setHidesBackButton(true, animated: true)
+        setupComponents()
+        setupConstraints()
     }
-    */
+    
+    private func setupComponents() {
+        setupViewControllers()
+        setupTabBarStyle()
+    }
+    
+    private func setupViewControllers() {
+        let rideViewController = UINavigationController(rootViewController: RideBaseViewController())
+        let progressViewController = UINavigationController(rootViewController: ProgressTableViewController())
+         
+        rideViewController.title = Constants.rideTitle
+        progressViewController.title = Constants.progressTitle
+        
+        setViewControllers([rideViewController, progressViewController], animated: false)
+    }
+    
+    private func setupTabBarStyle() {
+        guard let items = tabBar.items else { return }
+        items[0].image = Constants.rideImage
+        items[1].image = Constants.progressImage
+        
+        let tabBarAppearance = UITabBarAppearance()
+        let tabBarItemAppearance = UITabBarItemAppearance()
+        
+        tabBarAppearance.backgroundColor = .white
+        
+        tabBarItemAppearance.normal.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont.abelRegular(size: 14.0)
+        ]
+        
+        tabBarItemAppearance.selected.iconColor = Constants.selectedTabBarItemColor
+        tabBarItemAppearance.selected.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: Constants.selectedTabBarItemColor,
+        ]
+        
+        tabBarAppearance.stackedLayoutAppearance = tabBarItemAppearance
+        tabBar.standardAppearance = tabBarAppearance
+        tabBar.scrollEdgeAppearance = tabBarAppearance
+    }
+    
+    private func setupConstraints() {
+        
+    }
+}
 
+// MARK: - Constants
+
+extension RideTabBarViewController {
+    
+    enum Constants {
+        static let viewBackgroundColor = UIColor(red: 1, green: 0.557, blue: 0.145, alpha: 1)
+        static let selectedTabBarItemColor = UIColor(red: 1, green: 0.557, blue: 0.145, alpha: 1)
+        static let rideTitle = "My Ride"
+        static let progressTitle = "My Progress"
+        static let rideImage = UIImage(named: "figure.outdoor.cycle")
+        static let progressImage = UIImage(named: "list.bullet.clipboard")
+    }
 }

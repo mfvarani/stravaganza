@@ -25,14 +25,13 @@ class OnboardingPageViewController: UIPageViewController {
         super.viewDidLoad()
         dataSource = self
         delegate = self
+        setup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setup()
     }
     
-
     private func setup() {
         view.backgroundColor = Constants.viewBackgroundColor
         setupComponents()
