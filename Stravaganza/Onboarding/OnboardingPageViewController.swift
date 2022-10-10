@@ -13,6 +13,7 @@ class OnboardingPageViewController: UIPageViewController {
     
     var onboardingPages = [UIViewController]()
     let onboardingPageControl = UIPageControl()
+    let onboardingStartButton = UIButton(frame: .zero)
     
     // MARK: - Properties
     
@@ -31,7 +32,6 @@ class OnboardingPageViewController: UIPageViewController {
         setup()
     }
     
-    // MARK: - Setup
 
     private func setup() {
         view.backgroundColor = Constants.viewBackgroundColor
@@ -42,6 +42,7 @@ class OnboardingPageViewController: UIPageViewController {
     private func setupComponents() {
         setupPages()
         setupPageControl()
+        setupStartButton()
     }
     
     private func setupPages() {
@@ -64,27 +65,55 @@ class OnboardingPageViewController: UIPageViewController {
     private func setupPageControl() {
         onboardingPageControl.addTarget(self, action: #selector(onboardingPageControlTapped(_:)), for: .valueChanged)
         onboardingPageControl.translatesAutoresizingMaskIntoConstraints = false
-        onboardingPageControl.translatesAutoresizingMaskIntoConstraints = false
         onboardingPageControl.currentPageIndicatorTintColor = .white
         onboardingPageControl.pageIndicatorTintColor = .systemGray2
         onboardingPageControl.numberOfPages = onboardingPages.count
         onboardingPageControl.currentPage = 0
     }
     
+    private func setupStartButton() {
+        onboardingStartButton.addTarget(self, action: #selector(onboardingStartButtonTapped(_:)), for: .touchUpInside)
+        onboardingStartButton.translatesAutoresizingMaskIntoConstraints = false
+        onboardingStartButton.isHidden = true
+        onboardingStartButton.setTitle("Start!", for: .normal)
+        onboardingStartButton.titleLabel?.font = .abelRegular(size: 40)
+        onboardingStartButton.backgroundColor = UIColor(red: 0.0, green: 0.478, blue: 1.0, alpha: 0.18)
+        onboardingStartButton.layer.cornerRadius = 6
+    }
+    
+    private func showStartButtonIfNeeded() {
+        let lastPage = onboardingPageControl.currentPage == onboardingPages.count - 1
+        if lastPage { onboardingStartButton.isHidden = false }
+        else { onboardingStartButton.isHidden = true }
+    }
+
+    // MARK: - Actions
+    
     @objc func onboardingPageControlTapped(_ sender: UIPageControl) {
         setViewControllers([onboardingPages[sender.currentPage]], direction: .forward, animated: false, completion: nil)
+    }
+    
+    @objc func onboardingStartButtonTapped(_ sender: UIPageControl) {
+        let viewController = RideTabBarViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     // MARK: - Constraints
 
     private func setupConstraints() {
         view.addSubview(onboardingPageControl)
+        view.addSubview(onboardingStartButton)
         
         NSLayoutConstraint.activate([
             onboardingPageControl.widthAnchor.constraint(equalTo: view.widthAnchor),
             onboardingPageControl.heightAnchor.constraint(equalToConstant: 20),
             onboardingPageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            onboardingPageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16)
+            onboardingPageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
+            
+            onboardingStartButton.widthAnchor.constraint(equalToConstant: view.bounds.width/3),
+            onboardingStartButton.heightAnchor.constraint(equalToConstant: 40),
+            onboardingStartButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            onboardingStartButton.bottomAnchor.constraint(equalTo: onboardingPageControl.topAnchor, constant: -40)
         ])
     }
 
@@ -103,6 +132,7 @@ extension OnboardingPageViewController: UIPageViewControllerDelegate {
             isAnimating = false
         }
         onboardingPageControl.currentPage = currentIndex
+        showStartButtonIfNeeded()
     }
 }
 
@@ -145,6 +175,7 @@ extension OnboardingPageViewController {
     
     enum Constants {
         static let viewBackgroundColor = UIColor(red: 1, green: 0.557, blue: 0.145, alpha: 1)
+        static let buttonBackgroundColor = UIColor(red: 0.0, green: 0.478, blue: 1.0, alpha: 0.18)
         static let easyImage = UIImage(named: "easy")
         static let easyText = "Extremely simple to use"
         static let trackerImage = UIImage(named: "tracker")
