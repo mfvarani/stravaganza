@@ -28,7 +28,7 @@ class RideTimerView: UIView {
         let button = UIButton()
         button.setTitle("START", for: .normal)
         button.titleLabel?.font = .abelRegular(size: 30.0)
-        button.setTitleColor(UIColor(red: 1, green: 0.557, blue: 0.145, alpha: 1), for: .normal)
+        button.setTitleColor(.mainOrange, for: .normal)
         button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true

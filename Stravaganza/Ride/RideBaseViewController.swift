@@ -72,7 +72,7 @@ class RideBaseViewController: UIViewController, CLLocationManagerDelegate {
     
     private func setStartingLocationIfNeeded(_ location: CLLocationCoordinate2D) {
         if mapView == nil {
-            let camera = GMSCameraPosition.camera(withLatitude: location.latitude, longitude: location.longitude, zoom: 12.0)
+            let camera = GMSCameraPosition.camera(withLatitude: location.latitude, longitude: location.longitude, zoom: 13.0)
             mapView = GMSMapView.map(withFrame: view.frame, camera: camera)
             view.addSubview(mapView)
             marker.position = location
