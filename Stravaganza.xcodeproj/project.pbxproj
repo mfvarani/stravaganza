@@ -12,6 +12,10 @@
 		3E2CD73928F443F0005EF22C /* RideBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CD73828F443F0005EF22C /* RideBaseViewController.swift */; };
 		3E2CD73D28F5866C005EF22C /* RideTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CD73C28F5866C005EF22C /* RideTimerView.swift */; };
 		3E2CD73F28F59EC3005EF22C /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CD73E28F59EC3005EF22C /* UIColor+Utils.swift */; };
+		3E2CD74128F5D3E7005EF22C /* RideTimerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CD74028F5D3E7005EF22C /* RideTimerViewDelegate.swift */; };
+		3E2CD74328F5EAC8005EF22C /* RideResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CD74228F5EAC8005EF22C /* RideResultView.swift */; };
+		3E2CD74528F5F3CE005EF22C /* RideSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CD74428F5F3CE005EF22C /* RideSummary.swift */; };
+		3E2CD74A28F60560005EF22C /* ProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CD74828F60560005EF22C /* ProgressTableViewCell.swift */; };
 		3ECE81F928F0A51200DAE3E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE81F828F0A51200DAE3E8 /* AppDelegate.swift */; };
 		3ECE81FB28F0A51200DAE3E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE81FA28F0A51200DAE3E8 /* SceneDelegate.swift */; };
 		3ECE820228F0A51400DAE3E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE820128F0A51400DAE3E8 /* Assets.xcassets */; };
@@ -51,6 +55,10 @@
 		3E2CD73828F443F0005EF22C /* RideBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideBaseViewController.swift; sourceTree = "<group>"; };
 		3E2CD73C28F5866C005EF22C /* RideTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideTimerView.swift; sourceTree = "<group>"; };
 		3E2CD73E28F59EC3005EF22C /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
+		3E2CD74028F5D3E7005EF22C /* RideTimerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideTimerViewDelegate.swift; sourceTree = "<group>"; };
+		3E2CD74228F5EAC8005EF22C /* RideResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideResultView.swift; sourceTree = "<group>"; };
+		3E2CD74428F5F3CE005EF22C /* RideSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideSummary.swift; sourceTree = "<group>"; };
+		3E2CD74828F60560005EF22C /* ProgressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTableViewCell.swift; sourceTree = "<group>"; };
 		3ECE81F528F0A51200DAE3E8 /* Stravaganza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stravaganza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECE81F828F0A51200DAE3E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ECE81FA28F0A51200DAE3E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				3E2CD73628F44332005EF22C /* ProgressTableViewController.swift */,
+				3E2CD74828F60560005EF22C /* ProgressTableViewCell.swift */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -182,6 +191,9 @@
 				3ED1C54728F373BE00848DEE /* RideTabBarViewController.swift */,
 				3E2CD73828F443F0005EF22C /* RideBaseViewController.swift */,
 				3E2CD73C28F5866C005EF22C /* RideTimerView.swift */,
+				3E2CD74228F5EAC8005EF22C /* RideResultView.swift */,
+				3E2CD74028F5D3E7005EF22C /* RideTimerViewDelegate.swift */,
+				3E2CD74428F5F3CE005EF22C /* RideSummary.swift */,
 			);
 			path = Ride;
 			sourceTree = "<group>";
@@ -449,9 +461,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E2CD73728F44332005EF22C /* ProgressTableViewController.swift in Sources */,
+				3E2CD74328F5EAC8005EF22C /* RideResultView.swift in Sources */,
+				3E2CD74A28F60560005EF22C /* ProgressTableViewCell.swift in Sources */,
+				3E2CD74128F5D3E7005EF22C /* RideTimerViewDelegate.swift in Sources */,
 				3E2CD73928F443F0005EF22C /* RideBaseViewController.swift in Sources */,
 				3ED1C54028F0FA8100848DEE /* UIFont+Utils.swift in Sources */,
 				3ED1C53728F0E87700848DEE /* OnboardingViewModel.swift in Sources */,
+				3E2CD74528F5F3CE005EF22C /* RideSummary.swift in Sources */,
 				3ECE81F928F0A51200DAE3E8 /* AppDelegate.swift in Sources */,
 				3E2CD73D28F5866C005EF22C /* RideTimerView.swift in Sources */,
 				3E2CD73F28F59EC3005EF22C /* UIColor+Utils.swift in Sources */,

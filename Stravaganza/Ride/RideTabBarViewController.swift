@@ -22,7 +22,6 @@ class RideTabBarViewController: UITabBarController {
         view.backgroundColor = .white
         navigationItem.setHidesBackButton(true, animated: true)
         setupComponents()
-        setupConstraints()
     }
     
     private func setupComponents() {
@@ -74,10 +73,6 @@ class RideTabBarViewController: UITabBarController {
         ]
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
-    }
-    
-    private func setupConstraints() {
-        
     }
 }
 
