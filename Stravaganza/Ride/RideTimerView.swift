@@ -9,10 +9,10 @@ import UIKit
 
 class RideTimerView: UIView {
     
-    private let timer: Timer = {
-        let timer = Timer()
-        timer
-    }()
+//    private let timer: Timer = {
+//        let timer = Timer()
+//        timer
+//    }()
     
     private let timeLabel: UILabel = {
         let label = UILabel()
