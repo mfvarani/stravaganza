@@ -8,7 +8,7 @@
 import UIKit
 
 class RideTabBarViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -25,6 +25,7 @@ class RideTabBarViewController: UITabBarController {
     }
     
     private func setupComponents() {
+        setupNavigationBarStyle()
         setupViewControllers()
         setupTabBarStyle()
     }
@@ -32,7 +33,7 @@ class RideTabBarViewController: UITabBarController {
     private func setupViewControllers() {
         let rideViewController = UINavigationController(rootViewController: RideBaseViewController())
         let progressViewController = UINavigationController(rootViewController: ProgressTableViewController())
-         
+        
         rideViewController.title = Constants.rideTitle
         progressViewController.title = Constants.progressTitle
         
@@ -61,6 +62,17 @@ class RideTabBarViewController: UITabBarController {
         tabBarAppearance.stackedLayoutAppearance = tabBarItemAppearance
         tabBar.standardAppearance = tabBarAppearance
         tabBar.scrollEdgeAppearance = tabBarAppearance
+    }
+    
+    private func setupNavigationBarStyle() {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = Constants.viewBackgroundColor
+        appearance.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont.abelRegular(size: 24.0),
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ]
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
     
     private func setupConstraints() {

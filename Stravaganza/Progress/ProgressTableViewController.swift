@@ -12,12 +12,18 @@ class ProgressTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .yellow
+        navigationController?.isNavigationBarHidden = true
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.navigationItem.title = Constants.progressTitle
     }
 
     // MARK: - Table view data source
@@ -87,4 +93,11 @@ class ProgressTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension ProgressTableViewController {
+    
+    enum Constants {
+        static let progressTitle = "My Progress"
+    }
 }
