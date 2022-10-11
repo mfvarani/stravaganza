@@ -19,6 +19,7 @@ class RideTabBarViewController: UITabBarController {
     }
     
     private func setup() {
+        view.backgroundColor = .white
         navigationItem.setHidesBackButton(true, animated: true)
         setupComponents()
         setupConstraints()

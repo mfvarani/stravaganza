@@ -27,6 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.rootViewController = navigationController
         } else {
             let viewController = OnboardingPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+            setNavigationBarAppearance()
             let navigationController = UINavigationController(rootViewController: viewController)
             UserDefaults.standard.set(true, forKey: "notFirstTime")
             window.rootViewController = navigationController
@@ -66,5 +67,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
+}
+
+extension SceneDelegate {
+    private func setNavigationBarAppearance() {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .mainOrange
+        appearance.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont.abelRegular(size: 24.0),
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ]
+        appearance.shadowColor = .clear
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    }
 }
 
