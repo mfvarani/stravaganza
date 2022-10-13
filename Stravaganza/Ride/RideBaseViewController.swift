@@ -28,8 +28,6 @@ class RideBaseViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         
         timerView.delegate = self
-        
-        UserDefaults.standard.set([Ride](), forKey: "rides")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -112,9 +110,16 @@ extension RideBaseViewController: RideTimerViewDelegate {
     func didTapStopButton() {
         startedRide = false
         showResultView()
+        timerView.setTime(time: "00:00:00")
     }
     
     private func showResultView() {
+        
+        guard path.count() > 1 else {
+            timerView.removeFromSuperview()
+            return
+        }
+        
         let startCoordinate = path.coordinate(at: 0)
         let start = CLLocation(latitude: startCoordinate.latitude, longitude: startCoordinate.longitude)
         
@@ -125,11 +130,13 @@ extension RideBaseViewController: RideTimerViewDelegate {
         let finalDistance = String(format: "%.2f", distanceInKms)
         
         let time = timerView.getTime()
+        let rideSummary = Ride(time: time, distance: finalDistance)
         
         resultView = RideResultView(
             frame: .zero,
             time: time,
-            distance: finalDistance + " kms"
+            distance: finalDistance + " kms",
+            ride: rideSummary
         )
         
         guard let resultView = resultView else { return }
@@ -142,19 +149,6 @@ extension RideBaseViewController: RideTimerViewDelegate {
             resultView.widthAnchor.constraint(equalToConstant: view.frame.width * 0.8),
             resultView.heightAnchor.constraint(equalToConstant: view.frame.height/2)
         ])
-        
-        let rideSummary = Ride(time: time, distance: finalDistance)
-        
-        do {
-            let encoder = JSONEncoder()
-            let data = try encoder.encode(rideSummary)
-            
-            var rides = UserDefaults.standard.array(forKey: "rides") ?? [] as [Ride]
-            rides.append(data)
-            UserDefaults.standard.set(data, forKey: "ride")
-        } catch {
-            print("Unable to Encode Ride (\(error))")
-        }
         
         mapView.clear()
         timerView.removeFromSuperview()
