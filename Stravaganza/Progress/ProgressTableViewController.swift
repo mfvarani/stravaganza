@@ -8,7 +8,9 @@
 import UIKit
 
 class ProgressTableViewController: UITableViewController {
-
+    
+    var progressData: [Ride] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -18,14 +20,21 @@ class ProgressTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        progressData = []
+        getProgressData()
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        progressData.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: ProgressTableViewCell.identifier, for: indexPath)
+        let progress = progressData[indexPath.row]
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: ProgressTableViewCell.identifier, for: indexPath) as! ProgressTableViewCell
+        
+        cell.timeLabel.text = progress.time
+        cell.distanceLabel.text = (progress.distance ?? "0.0") + " kms"
         
         return cell
     }
@@ -34,8 +43,18 @@ class ProgressTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+    private func getProgressData() {
+        if let rides = UserDefaults.standard.array(forKey: "rides") {
+            for ride in rides {
+                do {
+                    let decoder = JSONDecoder()
+                    let ride = try decoder.decode(Ride.self, from: ride as? Data ?? Data())
+                    progressData.append(ride)
+                } catch {
+                    print("Unable to Decode Rides (\(error))")
+                }
+            }
+        }
     }
 }
 

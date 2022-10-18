@@ -142,4 +142,5 @@ class RideTimerView: UIView {
     }
     
     public func getTime() -> String? { timeLabel.text }
+    public func setTime(time: String) { timeLabel.text = time }
 }

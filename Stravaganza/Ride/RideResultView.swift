@@ -9,6 +9,8 @@ import UIKit
 
 class RideResultView: UIView {
     
+    private var ride = Ride(time: "0.0", distance: "0.0 kms")
+    
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -87,12 +89,13 @@ class RideResultView: UIView {
         super.init(frame: frame)
     }
     
-    public init(frame: CGRect, time: String?, distance: String?) {
+    public init(frame: CGRect, time: String?, distance: String?, ride: Ride) {
         super.init(frame: frame)
         self.backgroundColor = .white
         self.layer.cornerRadius = 10
         self.clipsToBounds = true
         self.layer.masksToBounds = true
+        self.ride = ride
         self.timeLabel.text = time
         self.distanceLabel.text = distance
         setupConstraints()
@@ -103,10 +106,21 @@ class RideResultView: UIView {
     }
     
     @objc private func didTapStore() {
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(ride)
+            
+            var savedRides = UserDefaults.standard.array(forKey: "rides") ?? [Ride]()
+            savedRides.append(data)
+            UserDefaults.standard.set(savedRides, forKey: "rides")
+        } catch {
+            print("Unable to Encode Ride (\(error))")
+        }
         self.removeFromSuperview()
     }
     
     @objc private func didTapDelete() {
+        
         self.removeFromSuperview()
     }
     
